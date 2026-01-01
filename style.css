@@ -655,6 +655,7 @@ div.famous {
     padding: 1.45rem 1.0875rem;
     border-bottom: 3px solid #8b7355;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 .header h1 {
     border-bottom: none;
@@ -719,4 +720,63 @@ div.famous {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     background-color: #faf8f3;
     padding: 4px;
+}
+
+.menu-toggle {
+    display: none;
+}
+.hamburger {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+        padding: 1rem 0.75rem;
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 0.75rem;
+        width: 30px;
+        height: 24px;
+        cursor: pointer;
+        z-index: 10;
+    }
+    .hamburger span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: #f5f1e8;
+        margin-bottom: 5px;
+        transition: all 0.3s ease;
+    }
+    .headerLinks {
+        display: none;
+        flex-direction: column;
+        margin-top: 1rem;
+        padding-top: 2rem;
+    }
+    .menu-toggle:checked ~ .headerLinks {
+        display: flex;
+    }
+    .menu-toggle:checked ~ .hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+    .menu-toggle:checked ~ .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle:checked ~ .hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+    .headerLink {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
+    .content {
+        padding: 1rem 0.75rem;
+    }
+    .mainPage img {
+        margin: 10px 0;
+    }
 }
