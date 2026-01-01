@@ -712,8 +712,9 @@ div.famous {
     width: 80%;
 }
 .mainPage img {
-    width: 195px;
-    margin: 50px;
+    max-width: 600px;
+    width: 100%;
+    margin: 20px;
     border: 2px solid #8b7355;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     background-color: #faf8f3;
