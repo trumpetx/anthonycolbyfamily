@@ -632,7 +632,7 @@ div.famous {
     color: #eceeef;
     background-color:#68c7c1;
     margin: 0 auto;
-    maxWidth: 960;
+    max-width: 960px;
     padding: 1.45rem 1.0875rem;
 }
 .headerLink a {
@@ -652,6 +652,12 @@ div.famous {
 }
 .mainLink a:hover {
     text-decoration: none;
+}
+.content {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 0px 1.0875rem 1.45rem;
+    padding-top: 0;
 }
 .membershipForm td {
     border: 1px solid black;
